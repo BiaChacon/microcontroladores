@@ -1,9 +1,9 @@
-int ledR = 11, ledY = 12, ledG = 13, ledRP = 1, ledGP = 2, botao = 10;
-bool estadoBotao = 0;
+int ledR = 11, ledY = 12, ledG = 13, ledRP = 9, ledGP = 10, botao = 8;
+bool estadoBotao = false;
 
 void setup() {
   
-  pinMode(botao,INPUT);
+  pinMode(botao,INPUT_PULLUP);
   pinMode(ledR,OUTPUT);
   pinMode(ledY,OUTPUT);
   pinMode(ledG,OUTPUT);
@@ -23,7 +23,7 @@ void loop() {
   digitalWrite(ledY,LOW);
   digitalWrite(ledGP,LOW);
 
-  if(estadoBotao == HIGH){
+  if(estadoBotao == false){
    
     delay(3000);
     
